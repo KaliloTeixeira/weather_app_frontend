@@ -1,0 +1,20 @@
+.city-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.city-list h2 {
+    margin-bottom: 1rem;
+}
+
+.city-list-item {
+    margin-bottom: 1rem;
+}

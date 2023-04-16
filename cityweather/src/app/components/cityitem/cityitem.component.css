@@ -1,0 +1,35 @@
+.city-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.city-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.city-item h3 {
+    margin-bottom: 0.5rem;
+}
+
+.city-item p {
+    margin: 0.5rem 0;
+}
+
+.city-item p:last-of-type {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.city-item img {
+    max-width: 100%;
+    margin-bottom: 0.5rem;
+}

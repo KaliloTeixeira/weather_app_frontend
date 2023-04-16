@@ -45,11 +45,11 @@ Create a client-server application, the main function is to show a cities weathe
 |**Component**|**Task**|**Description**|**Done (Y/N)**|
 | :-: | :-: | :-: | :-: |
 |Frontend|Create project structure|Create a new empty Angular project with Hello Weather message only.|:white_check_mark:|
-|Frontend|Build and deploy project|Build and run the empty project on a webserver.|--|
-|Frontend|Component: Add city component|Create the visuals of the Add city component, without REST calls.|--|
-|Frontend|Component: List cities component|Create the visuals of the List cities component, without REST calls.|--|
-|Frontend|Component: City listitem component|Create the visuals of the City listitem component.|--|
-|Frontend|Main application component|Layout the other component into the main app screen.|--|
+|Frontend|Build and deploy project|Build and run the empty project on a webserver.|:white_check_mark:|
+|Frontend|Component: Add city component|Create the visuals of the Add city component, without REST calls.|:white_check_mark:|
+|Frontend|Component: List cities component|Create the visuals of the List cities component, without REST calls.|:white_check_mark:|
+|Frontend|Component: City listitem component|Create the visuals of the City listitem component.|:white_check_mark:|
+|Frontend|Main application component|Layout the other component into the main app screen.|:white_check_mark:|
 |Frontend|REST: addCity integration|Add server side integration to the Add city component (addCity API call)|--|
 |Frontend|REST: listCity integration|Add server side integration to the List cities component (listCities API call)|--|
 |Frontend|REST: deleteCity integration|Add server side integration to the City listitem component (deleteCity API call)|--|
