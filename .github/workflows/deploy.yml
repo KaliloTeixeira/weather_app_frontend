@@ -28,4 +28,4 @@ jobs:
         pwd
         cd ..
         pwd
-        ll
+        dir
