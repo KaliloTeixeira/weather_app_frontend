@@ -22,11 +22,11 @@ export class CityitemComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     this.cityItemEl = this.elementRef.nativeElement.querySelector('.city-item');
     if (this.cityItemEl) {
-      const imageUrl = `https://source.unsplash.com/featured/?${this.city.cityname}`;
-      this.cityItemEl.style.backgroundImage = `url(${imageUrl})`;
+        const imageUrl = `https://source.unsplash.com/featured/?${this.city.cityname}`;
+        this.cityItemEl.style.backgroundImage = `url(${imageUrl})`;
     }
   }
-  
+
   removeCity(): void {
     this.remove.emit(this.city);
   }
