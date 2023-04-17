@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to Github Pages
 
 on:
   push:
@@ -6,21 +6,23 @@ on:
       - main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: npm install
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14.x'
 
-      - name: Build
-        run: npm run build --base-href /weather_app_frontend/cityweather/
+    - name: Install dependencies
+      run: |
+        cd cityweather
+        npm install
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.1
-        with:
-          branch: gh-pages
-          folder: cityweather/dist
-          token: ${{ secrets.WEATHERAPP_TOKEN }}
+    - name: Build and deploy to Github Pages
+      run: 
+        npm run deploy
