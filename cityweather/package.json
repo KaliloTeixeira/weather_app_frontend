@@ -5,10 +5,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href=/weather_app_frontend/cityweather/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build --base-href=/weather_app_frontend/cityweather/ && npx angular-cli-ghpages --dir=dist/cityweather"
+    "deploy": "ng build --base-href=/weather_app_frontend/cityweather/ && npx angular-cli-ghpages --dir=dist/weather_app_frontend"
   },
   "private": true,
   "dependencies": {
