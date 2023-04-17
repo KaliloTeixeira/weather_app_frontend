@@ -20,9 +20,10 @@ jobs:
 
     - name: Install dependencies
       run: |
-        cd cityweather
+        cd weather_app_frontend/cityweather
         npm install
 
     - name: Build and deploy to Github Pages
       run: 
+        cd weather_app_frontend/cityweather
         npm run deploy
