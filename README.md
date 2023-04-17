@@ -50,8 +50,8 @@ Create a client-server application, the main function is to show a cities weathe
 |Frontend|Component: List cities component|Create the visuals of the List cities component, without REST calls.|:white_check_mark:|
 |Frontend|Component: City listitem component|Create the visuals of the City listitem component.|:white_check_mark:|
 |Frontend|Main application component|Layout the other component into the main app screen.|:white_check_mark:|
-|Frontend|REST: addCity integration|Add server side integration to the Add city component (addCity API call)|--|
-|Frontend|REST: listCity integration|Add server side integration to the List cities component (listCities API call)|--|
-|Frontend|REST: deleteCity integration|Add server side integration to the City listitem component (deleteCity API call)|--|
+|Frontend|REST: addCity integration|Add server side integration to the Add city component (addCity API call)|:white_check_mark:|
+|Frontend|REST: listCity integration|Add server side integration to the List cities component (listCities API call)|:white_check_mark:|
+|Frontend|REST: deleteCity integration|Add server side integration to the City listitem component (deleteCity API call)|:white_check_mark:|
 |Frontend|Error handling|Handle and visualize possible error messages from the server.|--|
 |<p>Backend +</p><p>Frontend</p>|CHECK ALL THE APPLICATION IS WORKING?|CHECK ALL THE APPLICATION IS WORKING?|--|
