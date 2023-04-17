@@ -1,0 +1,94 @@
+.city-item {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+    background-size: cover;
+    background-color: #c9c6c6;
+  }
+  
+  .city-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: cover;
+  }
+  
+  .city-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .city-item button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+  }
+  
+  .city-item button:hover {
+    color: #333;
+    transform: rotate(360deg);
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
+  }
+  
+  .city-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: -1;
+  }
+  
+  .city-item-info {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(192, 192, 192, 0.5);
+    padding: 0 1rem;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+  }
+  
+  
+  .city-item-info h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+    z-index: 3;
+  }
+  
+  .city-item-info h2 {
+    margin: 0;
+    color: white;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+    z-index: 3;
+  }
+  
+  

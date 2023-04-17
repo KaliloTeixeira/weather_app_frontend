@@ -1,0 +1,10 @@
+<div class="city-item" [ngStyle]="{ 'background-image': 'url(' + imageUrl + ')' }">
+    <button (click)="removeCity()">
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+    </button>
+    <div class="city-item-info">
+        <h3>{{ city.cityname }}</h3>
+        <h2>{{ city.temperature }} °C</h2>
+    </div>
+</div>
+  
