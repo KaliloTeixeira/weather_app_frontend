@@ -26,5 +26,5 @@ jobs:
     - name: Build and deploy to Github Pages
       run: |
         pwd
-        cd ../cityweather
+        cd ../
         npm run deploy
