@@ -1,5 +1,8 @@
-<div class="city-item">
+<div class="city-item" [ngStyle]="{ 'background-image': 'url(' + imageUrl + ')' }">
     <h3>{{ city.cityname }}</h3>
-    <p>Temperature: {{ city.temperature }} °C</p>
-    <p>Time: {{ city.timestamp }}</p>
+    <h2>{{ city.temperature }} °C</h2>
+    <button (click)="removeCity()">
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+    </button>
 </div>
+  
