@@ -22,3 +22,15 @@
     margin-bottom: 1rem;
     width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+    .city-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .city-list {
+        grid-template-columns: 1fr;
+    }
+}
