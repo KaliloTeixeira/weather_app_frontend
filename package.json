@@ -1,14 +1,12 @@
 {
-  "name": "cityweather",
+  "name": "wheaterapp_frontend",
   "version": "0.0.0",
-  "homepage": "https://KaliloTeixeira.github.io/weather_app_frontend/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href=/weather_app_frontend/cityweather/",
-    "watch": "ng build --watch --configuration development",
+    "build": "ng build",
     "test": "ng test",
-    "deploy": "ng build --base-href=/weather_app_frontend/cityweather/ && npx angular-cli-ghpages --dir=dist/cityweather"
+    "deploy": "ng deploy --base-href=https://KaliloTeixeira.github.io/weatherapp_frontend/"
   },
   "private": true,
   "dependencies": {
