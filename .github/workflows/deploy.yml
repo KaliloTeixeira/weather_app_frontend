@@ -25,6 +25,10 @@ jobs:
 
     - name: Build and deploy to Github Pages
       run: |
+<<<<<<< HEAD
         pwd
         cd ../
+=======
+        cd ../weather_app_frontend/cityweather
+>>>>>>> f29f1f962b07dfd7b61c9ad238709390354e774d
         npm run deploy
