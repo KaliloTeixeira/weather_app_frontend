@@ -6,7 +6,7 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     margin-bottom: 1rem;
     border: 1px solid #ccc;
     transition: all 0.3s ease;
