@@ -29,3 +29,5 @@ jobs:
         cd ..
         pwd
         dir
+        cd weather_app_frontend
+        dir
