@@ -8,7 +8,7 @@
     "build": "ng build --base-href=/weather_app_frontend/cityweather/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build --base-href=/weather_app_frontend/cityweather/ && npx angular-cli-ghpages --dir=dist/weather_app_frontend"
+    "deploy": "ng build --base-href=/weather_app_frontend/cityweather/ && npx angular-cli-ghpages"
   },
   "private": true,
   "dependencies": {
