@@ -19,8 +19,11 @@ jobs:
         node-version: '14.x'
 
     - name: Install dependencies
-      run: npm install
+      run: |
+        cd cityweather
+        npm install
 
     - name: Build and deploy to Github Pages
       run: |
+        cd cityweather
         npm run deploy
