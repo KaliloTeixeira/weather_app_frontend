@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { WEATHERAPP_API_URL } from '../../app.constants';
 
 @Component({
   selector: 'app-add',
@@ -9,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class AddComponent implements OnInit {
 
   cityName: string = '';
+  @Output() cityAdded = new EventEmitter<void>();
 
   constructor(private http: HttpClient) { }
 
@@ -18,18 +20,38 @@ export class AddComponent implements OnInit {
   onSubmit() {
     const payload = { cityname: this.cityName.toUpperCase() };
     const headers = { 'Content-Type': 'application/json' };
-    console.log(this.cityName)
-    this.http.post('http://localhost:8080/Cityweather/webresources/cityweather/', payload, { headers })
-      .subscribe(
-        data => console.log(data),
-        error => {
+    console.log(this.cityName);
+    this.http.post(WEATHERAPP_API_URL + '/webresources/cityweather/', payload, { headers })
+      .subscribe({
+        next: data => {
+          console.log(data);
+          // Reload the city list by emitting an event to the parent component
+          this.cityAdded.emit();
+          this.popupMessage = 'New city added successfully!';
+          this.showPopupFlag = true;
+          setTimeout(() => {
+            this.showPopupFlag = false;
+          }, 3000);
+        },
+        error: error => {
           console.error(error);
-          alert("The City was not inserted, try it again. ERROR: " + error.message);
+          this.popupMessage = 'The city was not added, try again!';
+          this.showPopupFlag = true;
+          setTimeout(() => {
+            this.showPopupFlag = false;
+          }, 3000);
         }
-      );
+      });
   }
-  
-  
-  
+
+
+  popupMessage: string = '';
+  showPopupFlag: boolean = false;
+
+  showPopup() {
+    this.popupMessage = 'New city added successfully!';
+    this.showPopupFlag = true;
+  }
+
 
 }

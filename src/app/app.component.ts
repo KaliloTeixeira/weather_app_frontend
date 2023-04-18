@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { CitylistComponent } from './components/citylist/citylist.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cityweather';
+
+  @ViewChild(CitylistComponent) cityList!: CitylistComponent;
+
+  reloadCityList() {
+    this.cityList.loadCities();
+  }
+  
 }

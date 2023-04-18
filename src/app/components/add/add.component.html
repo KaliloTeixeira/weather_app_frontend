@@ -1,11 +1,10 @@
 <div class="add">
-  <h2>Add City</h2>
+  <h2>ADD CITY</h2>
   <form (submit)="onSubmit()">
     <div class="form-group">
-      <label for="name">City Name:</label>
-      <input type="text" id="name" name="name" [(ngModel)]="cityName" required>
+      <input type="text" id="name" name="name" [(ngModel)]="cityName" required placeholder="Type a City name">
+      <button type="submit">Add</button>
     </div>
-    <button type="submit">Add City</button>
   </form>
+  <app-popup *ngIf="showPopupFlag" [message]="popupMessage"></app-popup>
 </div>
-  

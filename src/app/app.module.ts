@@ -8,6 +8,7 @@ import { SearchComponent } from './components/search/search.component';
 import { CitylistComponent } from './components/citylist/citylist.component';
 import { CityitemComponent } from './components/cityitem/cityitem.component';
 import { AddComponent } from './components/add/add.component';
+import { PopupComponent } from './components/popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { AddComponent } from './components/add/add.component';
     CitylistComponent,
     CityitemComponent,
     AddComponent,
+    PopupComponent,
   ],
   imports: [
     BrowserModule,
