@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
@@ -22,7 +22,9 @@ jobs:
     #- name: Test
       #run: npm run test
 
+jobs:
+  deploy:
     - name: Deploy
-      run: npx run
+      run: npm run deploy
 
 
