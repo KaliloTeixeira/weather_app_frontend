@@ -12,8 +12,11 @@ export class AddComponent implements OnInit {
   cityName: string = '';
   @Output() cityAdded = new EventEmitter<void>();
 
+  popupMessage: string = '';
+  showPopupFlag: boolean = false;
+  
   constructor(private http: HttpClient) { }
-
+  
   ngOnInit(): void {
   }
 
@@ -43,15 +46,4 @@ export class AddComponent implements OnInit {
         }
       });
   }
-
-
-  popupMessage: string = '';
-  showPopupFlag: boolean = false;
-
-  showPopup() {
-    this.popupMessage = 'New city added successfully!';
-    this.showPopupFlag = true;
-  }
-
-
 }

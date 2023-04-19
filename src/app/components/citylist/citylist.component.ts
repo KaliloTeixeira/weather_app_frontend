@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { City } from 'src/app/models/city.model';
-import { WEATHERAPP_API_URL } from '../../app.constants';
+import { City } from '../../models/city.model';
+import { CityService } from '../../services/cityservice.service';
 
 @Component({
   selector: 'app-citylist',
@@ -9,8 +8,7 @@ import { WEATHERAPP_API_URL } from '../../app.constants';
   styleUrls: ['./citylist.component.css']
 })
 export class CitylistComponent implements OnInit {
-
-  constructor(private http: HttpClient) { }
+  constructor(private cityService: CityService) {}
 
   cities: City[] = [];
 
@@ -19,17 +17,17 @@ export class CitylistComponent implements OnInit {
   }
 
   loadCities(): void {
-    this.http.get<City[]>(WEATHERAPP_API_URL+'/webresources/cityweather/')
-      .subscribe(cities => this.cities = cities);
+    this.cityService.getCities().subscribe((cities: City[]) => {
+      this.cities = cities;
+    });
   }
 
   removeCity(city: City): void {
-    const index = this.cities.findIndex(c => c.id === city.id);
+    const index = this.cities.findIndex((c: City) => c.id === city.id);
     if (index !== -1) {
-      this.http.delete(WEATHERAPP_API_URL+`/webresources/cityweather/${city.id}`)
-        .subscribe(() => {
-          this.cities.splice(index, 1);
-        });
+      this.cityService.removeCity(city.id).subscribe(() => {
+        this.cities.splice(index, 1);
+      });
     }
   }
 }

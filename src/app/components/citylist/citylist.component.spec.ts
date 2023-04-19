@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CitylistComponent } from './citylist.component';
+import { assert } from 'console';
 
 describe('CitylistComponent', () => {
   let component: CitylistComponent;
@@ -22,4 +23,5 @@ describe('CitylistComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
 });

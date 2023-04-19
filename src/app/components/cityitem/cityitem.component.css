@@ -91,4 +91,16 @@
     z-index: 3;
   }
   
+  .city-item.removing {
+    animation: shrink-and-rotate 3s forwards;
+  }
+  
+  @keyframes shrink-and-rotate {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0) rotate(360deg);
+    }
+  }
   

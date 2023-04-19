@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, ElementRef, AfterViewInit } from '@angular/core';
 import { City } from '../../models/city.model';
-import { HttpClient } from '@angular/common/http';
+import { RANDOM_IMG_API_URL } from '../../app.constants';
 
 @Component({
   selector: 'app-cityitem',
@@ -22,8 +22,8 @@ export class CityitemComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     this.cityItemEl = this.elementRef.nativeElement.querySelector('.city-item');
     if (this.cityItemEl) {
-        const imageUrl = `https://source.unsplash.com/featured/?${this.city.cityname}`;
-        this.cityItemEl.style.backgroundImage = `url(${imageUrl})`;
+        this.imageUrl = RANDOM_IMG_API_URL + this.city.cityname;
+        this.cityItemEl.style.backgroundImage = `url(${this.imageUrl})`;
     }
   }
 
