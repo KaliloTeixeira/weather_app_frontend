@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 workflow:
   jobs:
-    build:
+    building:
       runs-on: ubuntu-latest
       steps:
       - name: Checkout code
@@ -22,8 +22,7 @@ workflow:
       #- name: Test
       #  run: npm run test
  
-    deploy:
+    deploying:
+      needs: building
       - name: Deploy
         run: npm run deploy
-
-
