@@ -7,8 +7,7 @@ on:
   pull_request:
     branches:
       - main
-workflow:
-  jobs:
+jobs:
     building:
       runs-on: ubuntu-latest
       steps:
@@ -22,5 +21,5 @@ workflow:
       runs-on: ubuntu-latest
       needs: building
       steps:
-        name: Deploy
-        run: npm run deploy
+        - name: Deploy
+          run: npm run deploy
