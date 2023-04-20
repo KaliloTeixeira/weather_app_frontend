@@ -5,26 +5,25 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+workflow:
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm ci
 
-    - name: Install Dependencies
-      run: npm ci
+      - name: Build
+        run: npm run build
+      
+      #- name: Test
+        #run: npm run test
 
-    - name: Build
-      run: npm run build
-    
-    #- name: Test
-      #run: npm run test
-
-jobs:
-  deploy:
-    - name: Deploy
-      run: npm run deploy
+    deploy:
+      - name: Deploy
+        run: npm run deploy
 
 
