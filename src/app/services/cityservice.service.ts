@@ -4,6 +4,7 @@ import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { City } from '../models/city.model';
 import { WEATHERAPP_API_URL } from '../app.constants';
+import { CITIES_MOCK } from '../app.constants';
 
 @Injectable({
   providedIn: 'root'
@@ -19,8 +20,9 @@ export class CityService {
   getCities(): Observable<City[]> {
     return this.http.get<City[]>(WEATHERAPP_API_URL + '/webresources/cityweather/all').pipe(
       catchError((error: any) => {
-        console.error('Failed to load cities', error);
-        return of([]);
+        console.error('Failed to load cities from api', error);
+        // Mock data in case of not able to connect with backend
+        return of(CITIES_MOCK);
       })
     );
   }
