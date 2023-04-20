@@ -16,10 +16,14 @@ jobs:
         - name: Install Dependencies
           run: npm ci
         - name: Build
-          run: npm run build
+          run: |
+            pwd
+            npm run build
     deploying:
       runs-on: ubuntu-latest
       needs: building
       steps:
         - name: Deploy
-          run: npm run deploy
+          run: |
+            pwd
+            npm run deploy
