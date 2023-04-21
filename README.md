@@ -1,4 +1,4 @@
-# weather_app_frontend
+# weatherapp_frontend
 
 # **Preparation Project**
 # **Weather JAVA EE + Angular+  UI**
@@ -6,6 +6,17 @@
 **Tech stack:** J2EE, Angular8+
 ## **Lesson goals**
 Project made during application for Intern Position at ITWare.
+
+### To run
+ // Clone the repository and run with npm
+   npm install
+   npm run start
+
+ps.: The listed cities that are showing are mockups. To see real time data, you must run the
+backend in your localhost:8080. In case of running the backend in other address, configure it in
+./src/app/app.constants.ts.
+
+Add and Delete will only work if the backend is running.
 
 **Angular 8+**
 1. Basic project structure
@@ -53,5 +64,5 @@ Create a client-server application, the main function is to show a cities weathe
 |Frontend|REST: addCity integration|Add server side integration to the Add city component (addCity API call)|:white_check_mark:|
 |Frontend|REST: listCity integration|Add server side integration to the List cities component (listCities API call)|:white_check_mark:|
 |Frontend|REST: deleteCity integration|Add server side integration to the City listitem component (deleteCity API call)|:white_check_mark:|
-|Frontend|Error handling|Handle and visualize possible error messages from the server.|--|
-|<p>Backend +</p><p>Frontend</p>|CHECK ALL THE APPLICATION IS WORKING?|CHECK ALL THE APPLICATION IS WORKING?|--|
+|Frontend|Error handling|Handle and visualize possible error messages from the server.|:white_check_mark:|
+|<p>Backend +</p><p>Frontend</p>|CHECK ALL THE APPLICATION IS WORKING?|CHECK ALL THE APPLICATION IS WORKING?|:white_check_mark:|
