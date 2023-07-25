@@ -2,6 +2,7 @@ import { City } from "./models/city.model";
 
 export const WEATHERAPP_API_URL = 'http://localhost:8080/weatherapp_backend';
 export const RANDOM_IMG_API_URL = 'https://source.unsplash.com/featured/?';
+export const BUGSNAG_API_KEY = '4ccacf4ce13edceb24f71f0a40b99b05';
 
 export const CITIES_MOCK: City[] =
     [

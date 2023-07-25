@@ -18,6 +18,8 @@
     "@angular/platform-browser": "^13.2.4",
     "@angular/platform-browser-dynamic": "^13.2.4",
     "@angular/router": "^13.2.4",
+    "@bugsnag/js": "^7.20.2",
+    "@bugsnag/plugin-angular": "^7.20.2",
     "rxjs": "^7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "^0.11.4"

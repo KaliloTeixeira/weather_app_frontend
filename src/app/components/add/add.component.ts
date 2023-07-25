@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { WEATHERAPP_API_URL } from '../../app.constants';
+import Bugsnag from '@bugsnag/js';
 
 @Component({
   selector: 'app-add',
@@ -37,12 +38,13 @@ export class AddComponent implements OnInit {
           }, 3000);
         },
         error: error => {
-          console.error(error);
+          console.error("error adding:", error);
           this.popupMessage = 'The city was not added, try again!';
           this.showPopupFlag = true;
           setTimeout(() => {
             this.showPopupFlag = false;
           }, 3000);
+          throw error;
         }
       });
   }
