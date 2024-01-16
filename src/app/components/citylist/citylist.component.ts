@@ -29,5 +29,6 @@ export class CitylistComponent implements OnInit {
         this.cities.splice(index, 1);
       });
     }
+    this.loadCities();
   }
 }
